@@ -1,8 +1,8 @@
 .programs {
-  padding-top: 70px;
-  padding-bottom: 70px;
+  background-color: #28eea7;
 }
 .programs-container {
+  flex-wrap: wrap;
   max-width: 1340px;
   flex-direction: column;
   padding-left: 70px;
@@ -36,6 +36,7 @@
 }
 
 .program-tabs-container {
+  flex-wrap: wrap;
   margin-top: 50px;
   display: flex;
   flex-direction: column;
@@ -44,6 +45,7 @@
   position: relative;
 }
 .tab-buttons {
+  flex-wrap: wrap;
   display: flex;
 }
 .tab {
@@ -58,6 +60,7 @@
 }
 
 .tab-content {
+  flex-wrap: wrap;
   justify-content: flex-start;
   align-self: stretch;
   display: flex;
@@ -71,6 +74,7 @@
   padding: 20px;
 }
 .inner-tab-container {
+  flex-wrap: wrap;
   gap: 24px;
   flex-direction: column;
   flex: 1;
@@ -80,6 +84,7 @@
   display: flex;
 }
 .inner-tab-left {
+  flex-wrap: wrap;
   border-radius: 20px;
   padding: 20px;
   gap: 24px;
@@ -91,6 +96,7 @@
   display: flex;
 }
 .inner-tab-title {
+  flex-wrap: wrap;
   color: #fcfcfd;
   align-self: stretch;
   text-align: left;
@@ -131,6 +137,7 @@
 }
 
 .date-section {
+  flex-wrap: wrap;
   background-color: #232323;
   color: #fcfcfd;
   text-align: left;
@@ -145,6 +152,7 @@
   display: flex;
 }
 .learn-more {
+  flex-wrap: wrap;
   text-align: right;
   align-self: stretch;
   margin-top: auto;
@@ -158,11 +166,22 @@
   text-decoration: none;
 }
 .tab-image {
+  flex-wrap: wrap;
   width: 400px;
   height: 400px;
   min-height: 100px;
   object-fit: cover;
   border-radius: 10px;
+}
+@media screen and (max-width: 767px) {
+  .tab-image {
+    flex-wrap: wrap;
+    width: 200px;
+    height: 200px;
+    min-height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
 }
 .container-fcs {
   border-top-left-radius: 0px;

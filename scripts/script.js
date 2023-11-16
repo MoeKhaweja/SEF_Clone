@@ -34,9 +34,11 @@ function switchTab(element, color, button) {
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
     y[i].classList.remove("tab-active");
+    y[i].style.color = "#222";
   }
   element.style.display = "flex";
   button.classList.add("tab-active");
+  button.style.color = color;
   programs.style.backgroundColor = color;
 }
 

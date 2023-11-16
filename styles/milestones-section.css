@@ -71,3 +71,51 @@
 .milestone-container.big {
   padding: 60px 70px;
 }
+
+@media screen and (max-width: 991px) {
+  .milestone-title {
+    font-size: 64px;
+  }
+  .milestone-title.small {
+    font-size: 42px;
+  }
+  .milestone-percentage {
+    font-size: 16px;
+  }
+  .milestone-container {
+    padding: 30px 20px;
+  }
+  .milestone-container.big {
+    padding: 30px 35px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .default-container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .milestone-title {
+    font-size: 42px;
+  }
+  .milestone-title.small {
+    font-size: 24px;
+  }
+  .milestone-percentage {
+    font-size: 14px;
+  }
+  .milestone-container {
+    border-radius: 15px;
+  }
+  .milestone-container.big {
+    border-radius: 15px;
+    padding: 35px;
+  }
+  .default-container {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
