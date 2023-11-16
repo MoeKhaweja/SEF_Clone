@@ -1,0 +1,75 @@
+.milestones {
+  padding: 70px;
+}
+.milestone-boxes {
+  flex-wrap: wrap;
+  margin-top: 50px;
+  gap: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+.boxes-left {
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+}
+.boxes-right {
+  flex-wrap: wrap;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.boxes-row {
+  flex-wrap: wrap;
+  gap: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.milestone-title {
+  color: #363738;
+
+  font-size: 120px;
+  font-weight: 900;
+}
+.milestone-title.small {
+  font-size: 64px;
+}
+.milestone-percentage {
+  color: #a5a6a9;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 900;
+  line-height: 1.4;
+}
+.milestone-percentage.left {
+  color: #363738;
+  text-align: left;
+}
+
+.milestone-percentage.small {
+  color: #363738;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.milestone-container {
+  flex-wrap: wrap;
+  grid-row-gap: 20px;
+  background-color: #f1f2f3;
+  border-radius: 20px;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  align-self: stretch;
+
+  display: flex;
+  padding: 40px;
+}
+.milestone-container.big {
+  padding: 60px 70px;
+}

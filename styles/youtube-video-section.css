@@ -2,7 +2,7 @@
   background-color: #f1f2f3;
   display: block;
 }
-.hello-world-container {
+.default-container {
   max-width: 1340px;
   flex-direction: column;
   padding: 70px;
@@ -10,7 +10,7 @@
   margin-left: auto;
   margin-right: auto;
 }
-.hello-section-title {
+.default-section-title {
   flex: 0 auto;
   align-items: center;
   display: flex;
@@ -32,7 +32,7 @@
   border-radius: 20px;
 }
 
-.hello-title {
+.default-title {
   color: #363738;
   text-align: left;
   line-height: 1.4;
@@ -40,31 +40,31 @@
   font-size: 24px;
   font-weight: 900;
 }
-.hello-arrow {
+.default-arrow {
   font-size: 36px;
   color: #28eea7;
   padding: 10px 20px;
   font-weight: 900;
 }
-.hello-circles {
+.default-circles {
   gap: 10px;
   margin-left: auto;
   display: flex;
 }
 
-.hello-circle-black {
+.default-circle-black {
   width: 24px;
   height: 24px;
   background-color: #363738;
   border-radius: 20px;
 }
-.hello-circle-grey {
+.default-circle-grey {
   width: 24px;
   height: 24px;
   background-color: #dcdee1;
   border-radius: 20px;
 }
-.hello-circle-green {
+.default-circle-green {
   width: 24px;
   height: 24px;
   background-color: #28eea7;
