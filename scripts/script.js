@@ -4,6 +4,41 @@ const animatedText = document.getElementById("animated-text");
 const overlay = document.getElementById("overlay");
 const cursor = document.getElementById("cursor");
 const heroContent = document.getElementById("hero-content");
+const fcs = document.getElementById("fcs");
+const fsw = document.getElementById("fsw");
+const fsd = document.getElementById("fsd");
+const uiux = document.getElementById("uiux");
+const fcsTab = document.getElementById("fcs-tab");
+const fswTab = document.getElementById("fsw-tab");
+const fsdTab = document.getElementById("fsd-tab");
+const uiuxTab = document.getElementById("uiux-tab");
+const programs = document.querySelector(".programs");
+
+fcs.addEventListener("click", () => {
+  switchTab(fcsTab, "#ffc635", fcs);
+});
+fsw.addEventListener("click", () => {
+  switchTab(fswTab, "#28eea7", fsw);
+});
+fsd.addEventListener("click", () => {
+  switchTab(fsdTab, "#9864da", fsd);
+});
+uiux.addEventListener("click", () => {
+  switchTab(uiuxTab, "#fb508e", uiux);
+});
+
+function switchTab(element, color, button) {
+  let i;
+  let x = document.getElementsByClassName("tab-content");
+  let y = document.getElementsByClassName("tab");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+    y[i].classList.remove("tab-active");
+  }
+  element.style.display = "flex";
+  button.classList.add("tab-active");
+  programs.style.backgroundColor = color;
+}
 
 modalToggle.forEach((button) => {
   button.addEventListener("click", () => {
@@ -33,15 +68,10 @@ const animation = [
 var _INTERVAL_VAL;
 var index = 0;
 let objectIndex = 0;
-// Cursor element
-// Implements typing effect
 function type() {
-  // Get substring with 1 characater added
   var text = animation[objectIndex].text.substring(0, index + 1);
   animatedText.innerHTML = text;
   index++;
-
-  // If full sentence has been displayed then start to delete the sentence after some time
   if (text === animation[objectIndex].text) {
     // Hide the cursor
     cursor.classList.add("blink");
@@ -53,34 +83,24 @@ function type() {
   }
 }
 
-// Implements deleting effect
 function deleteLetter() {
-  // Get substring with 1 characater deleted
   var text = animation[objectIndex].text.substring(0, index - 1);
   animatedText.innerHTML = text;
   index--;
-
-  // If sentence has been deleted then start to display the next sentence
   if (text === "") {
     clearInterval(_INTERVAL_VAL);
-
-    // If current sentence was last then display the first one, else move to the next
     if (objectIndex == animation.length - 1) {
       objectIndex = 0;
     } else objectIndex++;
 
     overlay.style.backgroundColor = animation[objectIndex].color;
     heroContent.style.color = animation[objectIndex].textColor;
-
     index = 0;
-
-    // Start to display the next sentence after some time
     setTimeout(function () {
       _INTERVAL_VAL = setInterval(type, 100);
     }, 200);
   }
 }
 
-// Start the typing effect on load
 _INTERVAL_VAL = setInterval(type, 100);
 type();
