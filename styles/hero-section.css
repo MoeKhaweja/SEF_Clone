@@ -15,7 +15,7 @@
 .hero-left {
   width: 100%;
   height: 100%;
-  background-image: url(./assets/images/left.png);
+  background-image: url(../assets/images/left.png);
   background-position: 50%;
   background-size: cover;
   background-clip: border-box;
@@ -136,7 +136,7 @@
       rgba(35, 35, 35, 0.85),
       rgba(35, 35, 35, 0.85)
     ),
-    url(./assets/images/right.png);
+    url(../assets/images/right.png);
   background-position: 0 0, 50%;
   background-size: auto, cover;
   align-items: center;
