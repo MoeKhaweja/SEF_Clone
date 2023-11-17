@@ -1,0 +1,13 @@
+.partners-row {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.partners-row img {
+  max-width: 100%;
+  height: 80px;
+  object-fit: contain;
+}

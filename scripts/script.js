@@ -14,6 +14,39 @@ const fsdTab = document.getElementById("fsd-tab");
 const uiuxTab = document.getElementById("uiux-tab");
 const programs = document.querySelector(".programs");
 
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("slide");
+
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
+
+  slides[slideIndex - 1].style.display = "flex";
+
+  setTimeout(showSlides, 5000); // Change image every 2 seconds
+}
+
+let acc = document.getElementsByClassName("accordion");
+let d;
+
+for (d = 0; d < acc.length; d++) {
+  acc[d].addEventListener("click", function () {
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "flex") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "flex";
+    }
+  });
+}
 fcs.addEventListener("click", () => {
   switchTab(fcsTab, "#ffc635", fcs);
 });
@@ -75,7 +108,6 @@ function type() {
   animatedText.innerHTML = text;
   index++;
   if (text === animation[objectIndex].text) {
-    // Hide the cursor
     cursor.classList.add("blink");
     clearInterval(_INTERVAL_VAL);
     setTimeout(function () {
